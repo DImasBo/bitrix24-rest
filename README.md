@@ -25,6 +25,18 @@ client = Bitrix24("domain", "webhook", "user_id")
 data = client.get_me()
 print(data)
 # output
-#{'result': {'ID': '1', 'ADMIN': True, 'NAME': 'Test', 'LAST_NAME': 'Last', 'PERSONAL_GENDER': '', 'TIME_ZONE': '', 'TIME_ZONE_OFFSET': 10800}, 'time': {'start': 1602087129.169014, 'finish': 1602087129.207644, 'duration': 0.038630008697509766, 'processing': 0.004441022872924805, 'date_start': '2020-10-07T19:12:09+03:00', 'date_finish': '2020-10-07T19:12:09+03:00'}}
+#{
+'result': {
+  'ID': '1', 
+  'ADMIN': True, 
+  'NAME': 'Test', 
+  'LAST_NAME': 'Last', 
+  ...
+  },
+  'time': {
+    'start': 1602087129.169014, 
+    ...
+    } 
+}
 #
 ```
