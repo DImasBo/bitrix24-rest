@@ -1,3 +1,5 @@
 __pycache__/
 */__pycache__/
-
+bitrix24_rest.egg-info/
+dist/
+.pytest_cache/
