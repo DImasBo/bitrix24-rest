@@ -15,7 +15,7 @@ Bitrix24 API documentation - Russian: http://dev.1c-bitrix.ru/rest_help/
 The following methods are implemented here:
   - get_me() -Allows to return basic Information about the current user . More for Method **profile**.  more https://training.bitrix24.com/rest_help/general/profile.php
   - get_users() - This method will return all users, except: bots, users for e-mail and users for Open Channels. More for Method **user.get** https://training.bitrix24.com/rest_help/users/user_get.php
-  - im_notify(to, message) - sending Notifies the specified user. more for Method **im.notify**  https://training.bitrix24.com/rest_help/im/im_notify.php
+  - im_notify(to, message) - sending Notifies the specified user. ![More for Method **im.notify**](https://training.bitrix24.com/rest_help/im/im_notify.php)
   - log_blogpost_add(title, message) - Adds a record to the Activity Stream on behalf of the current user. More for Method **log.blogpost.add.json** https://training.bitrix24.com/rest_help/im/im_notify.php
 
 ### Tuttorial
