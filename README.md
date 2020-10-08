@@ -59,3 +59,33 @@ client.log_blogpost_add("Title","Hello World!")
 ```
 ![result log_blogpost_add](https://github.com/DImasBo/bitrix24-rest/blob/main/results/post.png)
 
+##### get_users
+
+```
+from client_bitrix import Bitrix24
+client = Bitrix24("domain", "webhook", "user_id")
+data = client.get_users()
+print(data)
+# output
+'''[
+  {
+    "ID": "1",
+    "ACTIVE": true,
+    "EMAIL": "Bond@bitrix24.com",
+    "NAME": "James",
+    "LAST_NAME": "Bond",
+    ...
+    "USER_TYPE": "employee"
+  },
+  {
+    "ID": "2",
+    "ACTIVE": true,
+    "EMAIL": "Bond2@bitrix24.com",
+    "NAME": "James",
+    "LAST_NAME": "Bond",
+    ...
+    "USER_TYPE": "employee"
+  },
+]
+'''
+```
