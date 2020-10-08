@@ -43,3 +43,19 @@ print(data)
 }
 '''
 ```
+##### im_notify
+```
+from client_bitrix import Bitrix24
+client = Bitrix24("domain", "webhook", "user_id")
+client.im_notify("1","Купи слона") 
+```
+![result notify](https://github.com/DImasBo/bitrix24-rest/blob/main/results/message.png)
+
+##### log_blogpost_add
+```
+from client_bitrix import Bitrix24
+client = Bitrix24("domain", "webhook", "user_id")
+client.log_blogpost_add("Title","Hello World!")
+```
+![result log_blogpost_add](https://github.com/DImasBo/bitrix24-rest/blob/main/results/post.png)
+
