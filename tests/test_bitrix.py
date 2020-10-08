@@ -15,7 +15,7 @@ class TestClient:
 		client = Bitrix24(domain, webhook, user_id)
 		data = client.get_me()
 		print(data)
-		assert data["result"]["NAME"] == "Test"
+		assert data["result"]["NAME"] == "James"
 
 	def test_im_notify(self,domain, webhook, user_id):
 		client = Bitrix24(domain, webhook, user_id)
