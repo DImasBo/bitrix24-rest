@@ -50,17 +50,24 @@ class Bitrix24:
 		except Exception as e:
 			print("Error: blogpost_add. {}".format(e))
 
-	def get_users(self):
+	def get_users(self, USER_TYPE='employee',fired=True ):
 		#  data={"FILTER":{"USER_TYPE":"employee","ACTIVE":1}}
 		#  data={"FILTER":{"USER_TYPE":"employee","ACTIVE":1}}
-		responce = self._call_method("user.get", method="POST")
+		data = {"FILTER":{}}
+		if USER_TYPE:
+			data['FILTER']['USER_TYPE'] = USER_TYPE
+		if fired:
+			data['FILTER']['ACTIVE'] = 1
+
+
+		responce = self._call_method("user.get", method="POST", data=data)
 		try:
 			data = responce.json()
 			if 50 < int(data['total']):
 				result = data["result"]
 				l = int(data['total'] / 50) + 1
 				for i in range(1,l):
-					result+=self._call_method("user.get", method="POST",params={"start":50*i}).json()["result"]	
+					result+=self._call_method("user.get", method="POST",params={"start":50*i}, data=data).json()["result"]	
 				return result
 			else:
 				return data['result']
